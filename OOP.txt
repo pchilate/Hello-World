@@ -1,0 +1,242 @@
+OOP : OOP(Object Oriented Programming) is a programming method that relies on 
+      the concept of classes and objects. it is used to structure a software
+      programm into simple, resuable code (like classes).there many Object Oriented
+      Programming Languges out there like JavaScript,JAVA,C++,Python.
+
+features of Oops:
+
+1. Class : it is nothing but a blueprint of object or description of an object
+2. object: object is nothing but a real world enitity like car, cellphone etc
+3. constructor : Constructor is instance member method of object and it is used to 
+                 intialize the instance variable of an object
+
+4. Destructor : it is used to release the values of an object which is stored in the 
+                memory before destroying of an object by garbage collector.
+
+5. Encapulation : it one the principle of Oops method. it is the process of defining
+                  Attribute and behaviour of an object in single group. when we are making 
+                  any class that is nothing but we are implementing Encapsulation.
+
+
+6. PolyMorphism : it one of the principle of Oops method. its an abilty of an object to
+                  have an more than one form is called polymorphism. we can implement 
+                  polymorphism by using overloading and overriding method.
+
+7. inheritance : it is one of the principle of Oops method. reusibilty of code can be achive 
+                 by using inheritance. an object of child class can inherit the properties 
+                 of its parent class using this method.
+
+8. Abstraction : it is one of the principle of Oops method. sometimes we An abstract method is a method 
+                 that has a method definition but not implementation. Here we use 
+                 decorator @absstractmethod.
+
+9. Access Specifiers : there are two access specifier 1. Public 2 .Private 
+                       we do not use protect usually. these are use to give 
+                      accesse to the fields to use outside of the class.
+
+
+
+Class And Object : 
+
+Classes are like object constructors for creating objects. The description of an object is nothing but a class
+Classes are said to be logical quantities. Classes don’t consume any space in the memory. 
+Class is also called a template of an object. Classes have members 
+which can be fields, methods and constructors. A class has both static and instance initializers.
+
+
+Objects are always called as instances of a class. Objects are those that have state and behaviour. 
+Objects are abstract data types (i.e., objects behaviour is defined by a set of values and operations).
+These objects always correspond to things found in the real world, i.e., real entities. 
+So, they are also called a run time entity of the world. These are self–contained which consists of methods and 
+properties which makes data useful. Objects can be both physical and logical data. It contains addresses and
+takes up some space in memory. Some of the examples of objects are a dog, chair, tree etc.
+
+
+Example: 
+
+class Animal:
+   def __init__(Self):
+      self.name  = dog
+   def sound(self):
+      print("Bhaoo Bhaoo")
+
+A1 = Animal()
+ 
+Here in above Exmaple we have class called "Animal" and have one object of that class "A1"
+A1 object has the attribute "name"
+A1 has the method called "sound"
+
+similary if we make another object same class like
+
+A2 = Animal()
+
+Now object "A2"  is also hvaing the properties of class "Animal".
+
+
+
+Constructors and Destructors:
+
+Constructors are also an instance method of particular class. Constructors are used to intialize the object.
+its task is to assign the values to the data member of class when the object is created. The __init__() method is called
+constructors and implicitly called when the object is created.
+
+syntax : def __init__(self):
+            #body of the constructors
+
+types:
+      1. Default Constructors: The default constructor is simple constructor which doesn't accept any arguments.
+      2. Parametrised Constructors : Constructor with parameter is know as parameterised constructor. The
+                                     parameterised constructors takes its first argument as reference to the object as self.and rest
+                                     are the arguments ae provided by programmer.
+
+example 1 (default Constructor): 
+class Employee: 
+  def __init__(self):
+      self.id = 101
+e1 = Employee()
+
+here in the above example when object "e1" is created of class "Employee" implicitly the constructor is called and "e1.id = 101" is intialized.
+
+
+example 2 (Parameterised Constructor):
+class Employee:
+  def __init__(self,id):
+     self.id = id
+
+e1  = Employee(1001)
+
+here in above example when object "e1" is of class "Employee" is created and along with it argument "1001" is passed and constructor is accepting one 
+parameter "id".
+
+
+
+
+Destructors are called when an object gets destroyed. Python has a grabage collector that handles memory management automatically. so Destructors are not needed
+as much as in c++.
+
+The __Del__() method is known as a destructor method in python. it is called when all the references to the  object have been  deleted.
+
+syntax: 
+
+def __del__(self):
+  # body of destructor
+
+
+example: 
+
+class Employee:
+  def __init__(self):
+     print("Constructor is called for intialization.")
+  
+  def __del__(self):
+     print("Destructor is called for deleting the object.")
+
+e1 = Employee()
+del e1
+
+
+inheritance : inheritance is one of the principle of Oops method.Inheritance is the capability of one class to derive or inherit the properties from another class. 
+              inheritance facilitates Reusability of code. We don’t have to write the same code again and again.
+
+Types of inheritance:
+
+1. Single Level inheritance: When a child class inherits from only one parent class, it is called single inheritance. 
+
+syntax:  class A:
+            def __init__(self):
+                #body of Constructor
+         class B(A):
+            def __init__(self):
+                #body of Constructor
+
+2. Multi Level inheritance : When we have a child and grandchild relationship.
+
+syntax:  class A:
+            def __init__(self):
+                #body of Constructor
+         class B(A):
+            def __init__(self):
+                #body of Constructor
+         class C(B):
+            def __init__(self):
+                #body of Constructor
+
+3. Multiple inheritance: When a child class inherits from multiple parent classes, it is called multiple inheritance.
+
+syntax:  class A:
+            def __init__(self):
+                #body of Constructor
+         class B:
+            def __init__(self):
+                #body of Constructor
+         class C(A,B):
+            def __init__(self):
+                #body of Constructor
+
+4. Hierarchical inheritance :  More than one derived classes are created from a single parent class.
+
+syntax:  class A:
+            def __init__(self):
+                #body of Constructor
+         class B(A):
+            def __init__(self):
+                #body of Constructor
+         class C(A):
+            def __init__(self):
+                #body of Constructor
+
+
+
+5. Hybrid inheritance: This form combines more than one form of inheritance. Basically, it is a blend of more than one type of inheritance.
+
+
+
+Method Overrideing and operator Overloading:
+
+Method Overriding : Method having same name same arguments but having different implementation is called method overriding
+
+example: 
+
+class A:
+  def msg(self):
+     print("This msg is from class A")
+class B: 
+  def msg(self)
+     print("This msg is from class B")
+class C(A,B):
+  def msg(self):
+     print("This msg is from class C")
+   
+c = C()
+c.msg()  ------> Output = "This msg is from class c"
+
+
+if we want to access "msg" method from the parents class as well so we need to add "super().msg()" this in "msg" method of class C.
+
+
+class A:
+  def msg(self):
+     print("This msg is from class A")
+class B: 
+  def msg(self)
+     print("This msg is from class B")
+class C(A,B):
+  def msg(self):
+     super().msg()
+     print("This msg is from class C")
+
+c = C()
+c.msg
+
+so here when we run this code it will print ----> 
+"This msg is from class B"
+"This msg is from class A"
+"This msg is from class C"
+
+
+
+opertor Overloading : In pyhton method Overloading is not possible not possible but we can achive this by using variable length parameter and default value parameter.
+
+Example of Operator Overloading:
+1. "+" is used for adding two int type operands also and used as concatination for str type operands also.
+2. "*" is used for multiplying two int type operands also and used for repeating str for n times.
