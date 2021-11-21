@@ -1,0 +1,57 @@
+# import mysql.connector
+
+# mydatabase = mysql.connector.connect(
+#     host="localhost",
+#     user="root",
+#     password="Pratik@19066"
+# )
+
+# mycursor = mydatabase.cursor()
+
+# mycursor.execute("CREATE DATABASE Assignment")
+# mycursor.execute("use Assignment")
+# mycursor.execute(
+#     "CREATE TABLE Student (ID int(20) primary key, name varchar(20),marks int(20) not null)")
+
+# mycursor.execute(
+#     "INSERT INTO Student (id,name,marks) VALUES (101,'pratik',97);")
+# mydatabase.commit()
+
+# mycursor.execute(
+#     "INSERT INTO Student (id,name,marks) VALUES (102,'Vishal',95);")
+# mydatabase.commit()
+
+# mycursor.execute(
+#     "INSERT INTO Student (id,name,marks) VALUES (103,'Nisha',88);")
+# mydatabase.commit()
+
+
+# def show_Students():
+#     mycursor.execute("Select * from Student")
+#     myresult = mycursor.fetchall()
+#     for x in myresult:
+#         print(x)
+
+
+# def Update_marks(marks, id):
+#     mycursor.execute(
+#         "update Student set marks = {} where id = {} ".format(marks, id))
+#     mydatabase.commit()
+#     print("Marks Updated for id = {}".format(id))
+
+
+# def insert_New_Student(id, name, marks):
+#     sql = "insert into student (id,name,marks) values (%s,%s,%s)"
+#     val = (id, name, marks)
+#     mycursor.execute(sql, val)
+#     mydatabase.commit()
+
+#     print("insertion succssfully done")
+
+# def del_student(id):
+#     mycursor.execute("delete from student where id = {}".format(id))
+#     mydatabase.commit()
+#     print("Student of id = {} is deleted succssefully".format(id))
+
+# mydatabase.commit()
+# mydatabase.close()
